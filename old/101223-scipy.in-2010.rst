@@ -1,0 +1,79 @@
+===============================
+ SciPy India 2010 in Hyderabad
+===============================
+
+I have just returned to the USA after an intense ~10 days in India, where I had
+the opportunity to participate at the `Scipy India 2010 conference`_ thanks to
+a generous invitation by `Prabhu Ramachandran`_ and his `FOSSEE.in`_  project.
+Fossee.in (Free and Open Source Software in Engineering and Education in India)
+is a remarkable effort to systematically develop tools for the technical
+education and research environments in India based around an open source
+ecosystem, and Python plays a central role there (though other tools like LaTeX
+and Scilab are also used).  Considering that India, per Prabhu's numbers,
+graduates approximately 800.000 technical and engineering students per year,
+the potential long-term impact of this effort is absolutely enormous, and
+Prabhu has assembled a team full of both energy and talent.  I've been very
+excited about this since I first heard the news of its funding, and I'm glad to
+have had the chance of working with several members of the team for a few days.
+
+.. _Scipy India 2010 conference: http://scipy.in
+.. _Prabhu Ramachandran:
+.. _fossee.in: 
+
+The project brough to the conference a group of invited speakers from outside
+India: Perry Greenfield, John Hunter, Stefan van der Walt, Satrajit Ghosh,
+Jarrod Millman and myself.  Prabhu and his wife Kadambari (KD), also a member
+of the fossee team, did a wonderful job in hosting us, and the hospitality of
+the whole team was remarkable; I can't thank them enough for the time and
+energy they put into making all of us feel comfortable and enjoy our visit
+(which for most of us was our first foray into India).
+
+The conference
+==============
+
+The conference itself followed a similar format (with minor order alterations)
+to the US SciPy ones: two days of regular talks, then a mix of introductory
+tutorials and development sprints.  A brief summary of the (longer) invited
+talks and a sampling of contributed talks follows.
+
+Perry presented a beautiful opening keynote that combined the history of
+Python's growth in scientific computing through the eyes of the astronomy
+world, where he has played a leading role for years, with examples of the
+scientific problems in modern astronomy they have faced (and sometimes solved
+using Python).  John gave an overview of matplotlib_ that included both
+historical aspects and an overview of its current capabilities, highlighting
+some points that many people might not be aware of, like the new animation
+functionality.  Stefan's talk was about the social aspects of participaitng in
+open source communities as part of an academic career, a topic which I think
+was very fitting for the audience, since he showed how his contributions to
+Numpy and other Python tools have opened many scientific and professional doors
+for him.  Given how the goal of the Fossee project is to involve India's
+scientists and engineers with this community, I think this was probably one of
+the most useful talks of the event, and it was delivered with Stefan's unique
+combination of flair and self-deprecating humor that make him such a great
+speaker.  Satra and Jarrod both spoke about projects centered around
+neuroscience; Satra offered the audience (not composed of neuroscientists) an
+excellent introduction to the relevant scientific questions and an overview of
+the problems of modern neuroimaging data analysis and how the Nipype_ package
+offers solutions for some of them.  Jarrod spoke about the genesis of the
+umbrella Nipy_ effort that Nipype is a part of, and which now encompasses a
+number of related Python packages, each targeted at a different aspect of
+modern neuroimaging analysis.
+
+.. _nipy: http://nipy.org
+.. _nipype: http://nipy.org/nipype
+.. _matplotlib: http://matplotlib.sf.net
+
+
+
+IPython
+=======
+
+
+
+.. _larry: http://github.com/kwgoodman/la
+.. _pandas: http://code.google.com/p/pandas
+.. _on github: http://github.com/fperez/datarray
+.. _documentation: http://fperez.github.com/datarray-doc/
+.. _py4science series: https://cirl.berkeley.edu/view/Py4Science
+.. _an early proto-release to PyPI: http://pypi.python.org/pypi/datarray

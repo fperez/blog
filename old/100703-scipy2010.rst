@@ -1,0 +1,175 @@
+======================
+ SciPy 2010 in Austin 
+======================
+
+A lot of scientific Python events back-to-back: I've just wrapped up
+co-teaching a workshop on Python for computational chemistry `in Barcelona`_,
+our `Open Computational Research`_ Python mini-event in the context of `Sage
+Days 22`_ at Berkeley's MSRI_, and now the 2010 edition of the `SciPy
+conference`_, which this year for the first time took place in Austin, TX.  A
+few notes about the conference while they are fresh in my mind (I'll try to
+catch up on the other topics later).
+
+Since its inception in 2002, the conference had been held at Caltech (a great
+location for all those occasions), but this year Enthought took a more direct
+logistical role and hosted it at the UT Austin AT&T conference center.  They
+did a really great job: the venue was comfortable [#]_, the wifi excellent,
+there was space for discussions and the setup for the sprints was very good.
+Throughout the days the catering was perfect: instead of bringing coffee/snacks
+only during narrow time windows, they kept them available all day, so you
+didn't need to worry about missing the refreshments break.
+
+Python is now a grown-up scientific language
+============================================
+
+It was an interesting SciPy, with big changes in what's happening in the
+scientific Python world becoming readily apparent.  Already last year I had the
+feeling that we were finally solidifying enough the core tools layer for a wave
+of new projects and ideas to start taking shape, but now that process is in
+full swing.  There were great talks both on computational 'infrastructure'
+projects like Theano_ or Stefan's lightning one on the `image processing
+scikit`_, and also great applied work where Python is 'just the perfect tool
+for the job', like Chris Colbert's `robotic vision`_ presentation (sadly marred
+by problems with the video system).  Since I worry not only about IPython_ but
+also about the greater tool ecosystem (numpy_, scipy_, matplotlib_, mayavi_,
+sympy_, etc) , I find it extremely useful to see what kinds of things people
+are doing with these tools.  I get a better understanding of our current
+capabilities and more importantly, of our limitations.
+
+A few randomly-remembered talks in no particular order:
+
+- Theano_: we may get really high-level ways to express our ideas and still be
+  able to have efficient low-level execution on multicore/gpu systems.  This is
+  not quite a full production system, but it does some very elegant things with
+  code to be able to emit as efficient as possible of a low-level code.
+
+- The visualizations in Kristopher Overholt's `Numerical pyromaniacs`_ talk.
+  He showed demos of matplotlib/PIL plots overlaid on live video, to show
+  comparisons between the real videos of fire experiments and the model
+  predictions on flame height or other parameters.  It's both appealing and
+  very informative.
+
+- Brian's ØMQ_ talk, though I admit I'm heavily biased here since we're now
+  using ØMQ for so much of the new IPython work and a lot of our enthusiasm
+  comes from our initial prototyping work together.  Even with this disclosure,
+  it was a very good presentation.
+
+- The statistically oriented presentations, Pandas_ by Wes McKinney and
+  statsmodels_ by Skipper Seabold, were excellent.  I'm thrilled to see the
+  growth of the statistical functionality in Python.  While R is an
+  extraordinary collection of Statistical functionality, as a general
+  programming language it has a number of limitations.  I think that Python has
+  all the right bases to be a great tool for statistical computing, and these
+  are projects making strides in the right direction.
+
+.. _pandas: http://code.google.com/p/pandas/
+
+.. _statsmodels: http://conference.scipy.org/scipy2010/slides/skipper_seabold_statsmodels.pdf
+  
+.. _robotic vision: http://conference.scipy.org/scipy2010/slides/sccolbert_robot_vision.pdf
+  
+.. _theano: http://conference.scipy.org/scipy2010/slides/james_bergstra_theano.pdf
+.. _numerical pyromaniacs: http://conference.scipy.org/scipy2010/slides/kris_overholt_pyromaniacs.pdf 
+
+.. _ØMQ: http://conference.scipy.org/scipy2010/slides/brian_granger_pyzmq.pdf
+
+There was a marked increase of interest from industry this year: Microsoft,
+Dell, AQR capital, D.E. Shaw and others offerexd support and had a presence at
+the meeting.  I was particuarly pleased to see fellow Bay Area developers from
+a financial firm participating in the sprints.  It's great to see industry
+involvement not just in terms of financial contributions but also of direct
+hands-on participation.
+
+Numpy on .Net
+=============
+
+A big announcement_ was made by Travis Oliphant in his keynote about a
+partnership between Enthought and Microsoft to refactor Numpy so that its core
+has less/no CPython dependencies and then wrap it for access by IronPython,
+Microsoft's .NET implementation of Python, with a subsequent port of Scipy as
+well.  I've never been a fan of Microsoft Windows as a working environment, but
+I'm actually pretty excited about this possibility.  Windows is very widely
+used, and I've heard very good things about the technical foundations of the
+.NET Common Language Runtime system as well as the availability of many good
+libraries.  The prospect of being able to run all of our C- and Fortran-based
+numerical tools on top of the .NET machinery opens up lots of interesting
+opportunities for Python to be useful in environments that have already
+invested heavily in the .NET system.
+
+.. _announcement: http://www.flickr.com/photos/pivanov/4752318542
+
+I hope they will succeed, because it's a technically challenging (though very
+interesting and fun) project.  Travis mentioned a fairly tight timeline of a
+few months for the port, so we should know soon enough what the outcome is.
+
+Here is the official `press release`_  from Enthought.
+
+.. _press release: http://www.enthought.com/media/SciPyNumPyDotNet.pdf
+
+The tutorials
+=============
+
+This year I wasn't involved with the tutorial organization, but Brian Granger
+took over and from the feedback I received, he did a terrific job (I
+unfortunately missed both tutorial days).  Many people specifically mentioned
+to me the quality of his own tutorial session, the HPC presentation.  I read
+over the materials, and it's a very compact and efficient overview of
+performance analysis and parallelization tools and strategies available to
+Python developers.
+
+.. _[#]: except for a sub-par video system on the main auditorium which was
+  finicky and had horrific contrast, so speakers with slightly dark slides
+  ended up with big black boxes on the screen.
+
+.. _in Barcelona: http://www.xrqtc.cat/index.php/en/home-escuela-4-2010
+.. _Open Computational Research: XXX
+.. _Sage Days 22: XXX
+.. _MSRI: http://msri.org
+.. _SciPy conference: http://conference.scipy.org
+.. _Theano: XXX
+.. _image processing scikit: http://scikits.appspot.com/ XXX
+.. _IPython: http://ipython.scipy.org
+.. _numpy:  http://numpy.scipy.org
+.. _scipy:  http://www.scipy.org
+.. _matplotlib: http://matplotlib.sf.net
+.. _mayavi: http:// XXX
+.. _sympy: http://sympy.org
+
+
+Arrays with labeled axes
+========================
+
+We had a great Birds of a Feather (BoF) session discussing the various
+approaches to arrays with labeled axes, arbitrary tick labels along the axes
+(so you can index with something other than integers in the ``0..n`` range),
+and similar ideas.  At SciPy'09 I started playing with this idea and since, a
+group of us had made some progress on a prototype code, especially thanks to
+Mike Trumpis' recent work.  But in the meantime a multitude of related projects
+have been developed, indicating that there's a genuine need for something like
+this.  Our approach has been to keep a very simple and generic code that
+directly subclasses numpy's ndarray, in the hope that it can go directly into
+numpy itself.  More sophisticated systems that provide even richer semantics,
+like larry_ and pandas_, hopefully would then be able to reuse this common
+layer.
+
+After returning to Berkeley, we've had a design discussion and a sprint as part
+of the `Py4Science series`_ I organize on campus.  It was particularly useful
+that Keith Goodman (the author of Larry_), has been very actively working with
+us.  Currently our code is available `on github`_ and we have also pushed an
+`early proto-release to PyPI`_ as well as keeping up to date documentation_.
+We hope this will serve as a good base to understand how to best design such an
+object for eventually improving Numpy.
+
+I want to thank everyone who participated in the discussion, and at the same
+time apologize for not having been sufficiently active on the list and merging
+some pull requests that have already been made (sorry Rob!).  But I hope that
+with Keith and a few more participants on board, my own time limitations will
+be less of a bottleneck and we'll have some great improvements to numpy
+available for real-world use very soon.
+
+.. _larry: http://github.com/kwgoodman/la
+.. _pandas: http://code.google.com/p/pandas
+.. _on github: http://github.com/fperez/datarray
+.. _documentation: http://fperez.github.com/datarray-doc/
+.. _py4science series: https://cirl.berkeley.edu/view/Py4Science
+.. _an early proto-release to PyPI: http://pypi.python.org/pypi/datarray
